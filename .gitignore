@@ -7,6 +7,10 @@ node_modules/
 
 # local configuration files
 stateCollegeCrawler.js
+testMiner.js
+
+# local data files
+*.out
 
 
 #################

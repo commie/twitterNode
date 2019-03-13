@@ -24,10 +24,18 @@ var readerOptions = require("./" + comLineOptions.crawlerName + ".js").options;
 var options = {
     host:   'stream.twitter.com',
     path:   '/1.1/statuses/filter.json?' + 
-            'locations=' + readerOptions.bbox + 
+            // 'locations=' + readerOptions.bbox + 
             '&' + 'delimited=length' + 
             '&' + 'stall_warnings=true'
 };
+
+if (readerOptions.bbox) {
+    options.path += '&' + 'locations=' + readerOptions.bbox
+}
+
+if (readerOptions.keyw) {
+    options.path += '&' + 'track=' + readerOptions.keyw
+}
 
 var defaultTimeout  = 2500,
     maxTimeout      = 300000,

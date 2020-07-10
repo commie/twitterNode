@@ -524,7 +524,7 @@ setInterval(function() {
         var year        = timeStamp.getUTCFullYear(),
             month       = (timeStamp.getUTCMonth() < 9) ? "0" + (timeStamp.getUTCMonth() + 1) : (timeStamp.getUTCMonth() + 1),
             day         = (timeStamp.getUTCDate() < 10) ? "0" + timeStamp.getUTCDate() : timeStamp.getUTCDate(),
-            fileName    = "distributedReader.2.1." + readerOptions.name + "." + year + "." + month + "." + day + ".out";
+            fileName    = "distributedReader.2.2." + readerOptions.name + "." + year + "." + month + "." + day + ".out";
 
         fs.appendFileSync(fileName, tweetString);
 
